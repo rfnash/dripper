@@ -31,12 +31,12 @@ verify_installed() {
 # TODO: Before linking detect similar formula linked!
 stow_link() {
   if [ -f $STOW_PATH/.stow_${1} ]; then
-    echo "${1} already linked."
+    echo "${1} re-linked."
   else
     echo "${1} linked."
-    stow -d $STOW_PATH $1
-    touch $STOW_PATH/.stow_${1}
   fi
+  stow -d $STOW_PATH $1
+  touch $STOW_PATH/.stow_${1}
 }
 
 stow_unlink() {
