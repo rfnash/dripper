@@ -7,7 +7,7 @@ source drip-validator
 source $STOW_DEFINITIONS_PATH/$1
 
 stow_remove() {
-  echo "Removing package files ..."
+  echo "Removed package files."
   rm -rf $STOW_PATH/$STOW
 }
 
