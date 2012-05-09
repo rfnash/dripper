@@ -12,9 +12,13 @@ if _install; then
   cd $SRC_PATH
   curl -O $URL
   tar xzf $STOW.tgz
+
   cd $STOW
   ./configure \
-    --prefix=$PREFIX
+    --prefix=$PREFIX \
+    --enable-shared
+
+  make
   make install
 
   cd $SRC_PATH
