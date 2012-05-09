@@ -9,16 +9,15 @@ LIBEVENT_STOW=libevent-2.0.18-stable
 LIBEVENT_STOW_PATH=$STOW_PATH/$LIBEVENT_STOW
 
 if _install; then
-  pushd $SRC_PATH
+  cd $SRC_PATH
   curl -O http://cloud.github.com/downloads/libevent/libevent/$LIBEVENT_STOW.tar.gz
   tar xzf $LIBEVENT_STOW.tar.gz
   cd $LIBEVENT_STOW
   ./configure \
     --prefix=$LIBEVENT_STOW_PATH
   make && make install
-  popd
 
-  pushd $SRC_PATH
+  cd $SRC_PATH
   curl -O http://memcached.googlecode.com/files/$STOW.tar.gz
   tar xzf $STOW.tar.gz
   cd $STOW
@@ -26,7 +25,6 @@ if _install; then
     --prefix=$PREFIX \
     --with-libevent=$LIBEVENT_STOW_PATH
   make && make install
-  popd
 fi
 
 if _uninstall; then

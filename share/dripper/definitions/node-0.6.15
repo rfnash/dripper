@@ -6,12 +6,11 @@ VERSION=v0.6.15
 set_variables
 
 if _install; then
-  pushd $SRC_PATH
+  cd $SRC_PATH
   curl -O http://nodejs.org/dist/$VERSION/$STOW.tar.gz
   tar xzf $STOW.tar.gz
   cd $STOW
   ./configure \
     --prefix=$PREFIX
   make && make install
-  popd
 fi

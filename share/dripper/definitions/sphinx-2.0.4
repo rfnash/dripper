@@ -6,12 +6,11 @@ VERSION=2.0.4
 set_variables
 
 if _install; then
-  pushd $SRC_PATH
+  cd $SRC_PATH
   curl -O http://sphinxsearch.com/files/$STOW-release.tar.gz
   tar xzf $STOW-release.tar.gz
   cd $STOW-release
   ./configure \
     --prefix=$PREFIX
   make && make install
-  popd
 fi
