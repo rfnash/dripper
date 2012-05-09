@@ -5,12 +5,11 @@ install_master()
   echo "Downloading Dripper"
   _url=https://github.com/fesplugas/dripper/tarball/master
 
-  pushd $(mktemp -d /tmp/dripper.XXXXXXXXXX)
+  cd $(mktemp -d /tmp/dripper.XXXXXXXXXX)
   curl -L ${_url} -o dripper.tar.gz
   tar xzf dripper.tar.gz
   cd fesplugas-dripper*
   source script/install
-  popd > /dev/null
 }
 
 install_master
