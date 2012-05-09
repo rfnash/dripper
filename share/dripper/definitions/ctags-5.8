@@ -7,7 +7,7 @@ set_variables
 URL=http://garr.dl.sourceforge.net/project/ctags/ctags/$VERSION/$STOW.tar.gz
 
 if _install; then
-  pushd $SRC_PATH
+  cd $SRC_PATH
   curl -O $URL
   tar xzf $STOW.tar.gz
   cd $STOW
@@ -16,5 +16,4 @@ if _install; then
     --enable-macro-patterns \
     --with-readlib
   make install
-  popd
 fi
