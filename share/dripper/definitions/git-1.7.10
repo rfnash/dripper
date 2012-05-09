@@ -6,15 +6,13 @@ VERSION=1.7.10
 set_variables
 
 if _install; then
-  pushd $SRC_PATH
-  # TODO: Detect if package has been already been downloaded.
+  cd $SRC_PATH
   curl -O http://git-core.googlecode.com/files/$STOW.tar.gz
   tar xzf $STOW.tar.gz
   cd $STOW
   ./configure \
     --prefix=$PREFIX
   make && make install
-  popd
 
   COMPLETION_PATH=$PREFIX/etc/bash_completion.d
   mkdir -p $COMPLETION_PATH
