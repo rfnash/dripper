@@ -78,7 +78,7 @@ TODO and Whishlist
 Acknowledgements
 ----------------
 
-Thanks to [Homebrew], it's an awesome tool. As and [stow] user I
+Thanks to [Homebrew], it's an awesome tool. As an [stow] user I
 always wanted to do something similar and [Homebrew] has inspired
 many of the commands used by **Dripper**.
 
