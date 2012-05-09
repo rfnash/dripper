@@ -9,16 +9,15 @@ YAML_STOW=yaml-0.1.4
 YAML_STOW_PATH=$STOW_PATH/$YAML_STOW
 
 if _install; then
-  pushd $SRC_PATH
+  cd $SRC_PATH
   curl -O http://pyyaml.org/download/libyaml/$YAML_STOW.tar.gz
   tar xzf $YAML_STOW.tar.gz
   cd $YAML_STOW
   ./configure \
     --prefix=$YAML_STOW_PATH
   make install
-  popd
 
-  pushd $SRC_PATH
+  cd $SRC_PATH
   curl -O http://ftp.ruby-lang.org/pub/ruby/1.9/$STOW.tar.gz
   tar xzf $STOW.tar.gz
   cd $STOW
@@ -29,13 +28,11 @@ if _install; then
     --enable-pthread \
     --enable-shared
   make && make install
-  popd
 
-  pushd $PREFIX
+  cd $PREFIX
   ./bin/gem update --system
   ./bin/gem install bundler --no-ri --no-rdoc
   ./bin/gem install rake --no-ri --no-rdoc
-  popd
 fi
 
 if _install; then
