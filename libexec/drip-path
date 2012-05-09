@@ -4,4 +4,5 @@ source drip-base
 source drip-validator
 source $STOW_DEFINITIONS_PATH/$1
 
+verify_installed $STOW
 echo "PATH=$PREFIX/bin:\$PATH"
