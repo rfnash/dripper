@@ -8,10 +8,9 @@ set_variables
 if _install; then
   mkdir -p $PREFIX/bin
 
-  pushd $SRC_PATH
+  cd $SRC_PATH
   curl -O https://nodeload.github.com/petdance/ack/tarball/$VERSION
   tar xzf $VERSION
   cd petdance-ack*
   mv ack $PREFIX/bin
-  popd
 fi
