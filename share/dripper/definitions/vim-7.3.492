@@ -7,7 +7,7 @@ set_variables
 
 if _install; then
   require_hg
-  pushd $SRC_PATH > /dev/null
+  cd $SRC_PATH
   if [ ! -d $STOW ]; then
     hg clone --updaterev $VERSION https://vim.googlecode.com/hg/ $STOW
   fi
@@ -25,5 +25,4 @@ if _install; then
     --with-ruby-command=/usr/bin/ruby \
     --with-features=huge
   make && make install
-  popd > /dev/null
 fi
