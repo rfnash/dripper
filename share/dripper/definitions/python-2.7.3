@@ -18,8 +18,7 @@ if _install; then
     --prefix=$PREFIX \
     --enable-shared
 
-  make
-  make install
+  make && make install
 
   cd $SRC_PATH
   curl -O http://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg
