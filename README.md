@@ -2,7 +2,9 @@ Dripper
 =======
 
 **Dripper** is a collection of definitions to install software packages
-with [stow], the GNU package manager.
+with [stow], the GNU package manager. It's always recommended to use
+package manager provided by your system, but sometimes you need a tool
+to install alternate packages.
 
 
 Install
