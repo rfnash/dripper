@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+source drip-base
+source drip-validator
+source $STOW_DEFINITIONS_PATH/$1
+
+verify_installed $STOW
+
+PATH="${PREFIX}/bin:${PATH}"
+exec $SHELL

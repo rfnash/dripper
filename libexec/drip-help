@@ -17,5 +17,6 @@ The most commonly used drip commands are:
    unlink     Unlink package
    cleanup    Remove all sources
    path       Show package path
+   source     Creates a subshell for package
 
 See 'drip help <command>' for information on a specific command."
