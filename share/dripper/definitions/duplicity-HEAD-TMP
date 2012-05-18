@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 PACKAGE=duplicity
-VERSION='head'
+VERSION='HEAD'
 
 set_variables
 
