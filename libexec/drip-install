@@ -9,9 +9,13 @@ source drip-validator
 # re-use it, otherwise perform the typical operations provided by the
 # definition.
 
-if [ -d $STOW_PATH/$1 ]; then
-  drip link $1
-else
+if [ ! -d $STOW_PATH/$1 ]; then
   source $STOW_DEFINITIONS_PATH/$1
-  stow_link_one
 fi
+
+# if [ -d $STOW_PATH/$1 ]; then
+#   drip link $1
+# else
+#   source $STOW_DEFINITIONS_PATH/$1
+#   stow_link_one
+# fi
