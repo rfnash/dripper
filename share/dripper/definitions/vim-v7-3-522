@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 PACKAGE=vim
-VERSION='v7-3-523'
+VERSION='v7-3-522'
 
 set_variables
 
