@@ -1,28 +1,4 @@
 #!/usr/bin/env bash
 
-PACKAGE=vim
 VERSION='v7-3-522'
-
-set_variables
-
-if _install; then
-  require_hg
-  cd $SRC_PATH
-  if [ ! -d $STOW ]; then
-    hg clone --updaterev $VERSION https://vim.googlecode.com/hg/ $STOW
-  fi
-  cd $STOW
-  ./configure \
-    --prefix=$PREFIX \
-    --enable-gui=no \
-    --without-x \
-    --disable-nls \
-    --enable-multibyte \
-    --with-tlib=ncurses \
-    --enable-pythoninterp \
-    --enable-rubyinterp \
-    --enable-cscope \
-    --with-ruby-command=/usr/bin/ruby \
-    --with-features=huge
-  make && make install
-fi
+source ${STOW_DEFINITIONS_PATH}/_vim
