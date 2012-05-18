@@ -6,6 +6,8 @@ with [stow], the GNU package manager. It's always recommended to use
 package manager provided by your system, but sometimes you need a tool
 to install alternate packages.
 
+You can see a list of definitions [here][definitions].
+
 
 Install
 -------
@@ -94,3 +96,4 @@ have been copied from [rbenv].
 [ruby-build]: https://github.com/sstephenson/ruby-build
 [rbenv]: https://github.com/sstephenson/rbenv
 [drip-helper]: https://github.com/fesplugas/dripper/blob/master/libexec/drip-helper
+[definitions]: https://github.com/fesplugas/dripper/blob/master/share/dripper/definitions
