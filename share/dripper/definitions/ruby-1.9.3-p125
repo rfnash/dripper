@@ -10,7 +10,7 @@ YAML_STOW_PATH=$STOW_PATH/$YAML_STOW
 
 if _install; then
   cd $SRC_PATH
-  curl -O http://pyyaml.org/download/libyaml/$YAML_STOW.tar.gz
+  curl --silent -O http://pyyaml.org/download/libyaml/$YAML_STOW.tar.gz
   tar xzf $YAML_STOW.tar.gz
   cd $YAML_STOW
   ./configure \
@@ -18,7 +18,7 @@ if _install; then
   make install
 
   cd $SRC_PATH
-  curl -O http://ftp.ruby-lang.org/pub/ruby/1.9/$STOW.tar.gz
+  curl --silent -O http://ftp.ruby-lang.org/pub/ruby/1.9/$STOW.tar.gz
   tar xzf $STOW.tar.gz
   cd $STOW
   ./configure \
