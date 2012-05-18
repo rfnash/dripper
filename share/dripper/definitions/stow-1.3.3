@@ -7,7 +7,7 @@ set_variables
 
 if _install; then
   cd $SRC_PATH
-  curl -O http://ftp.gnu.org/pub/gnu/stow/$STOW.tar.gz
+  curl --silent -O http://ftp.gnu.org/pub/gnu/stow/$STOW.tar.gz
   tar xzf $STOW.tar.gz
   cd $STOW
   ./configure \
