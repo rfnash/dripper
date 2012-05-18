@@ -9,7 +9,7 @@ The most commonly used drip commands are:
    search     Search a definition
    list       List installed packages
    install    Install a definition
-   uninstall  Uninstall a definition
+   uninstall  Uninstall a definition (unlink and remove)
    update     Fetch new version and definitions
    show       Show a definition
    info       Show definition info
