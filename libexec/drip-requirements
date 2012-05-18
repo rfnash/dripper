@@ -14,6 +14,13 @@ require_hg() {
   fi
 }
 
+require_bzr() {
+  if [ ! $(which bzr) ]; then
+    echo "Dripper needs \`bzr' installed on the system."
+    exit 1
+  fi
+}
+
 # TODO: `drip install git` should detect latest version.
 require_git() {
   if [ ! $(which git) ]; then
