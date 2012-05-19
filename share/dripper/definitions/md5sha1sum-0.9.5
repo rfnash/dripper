@@ -7,11 +7,19 @@ set_variables
 URL=http://www.microbrew.org/tools/md5sha1sum/md5sha1sum-0.9.5.tar.gz
 
 if _install; then
+  # Force the creation of bin folder because `make` is unable to do it.
+  BIN_PATH=$PREFIX/bin
+  mkdir -p $BIN_PATH
+
   cd $SRC_PATH
   curl --silent -O $URL
   tar xzf $STOW.tar.gz
   cd $STOW
   ./configure \
     --prefix=$PREFIX
-  make install
+  make
+
+  cp -v md5sum $BIN_PATH
+  cp -v sha1sum $BIN_PATH
+  cp -v ripemd160sum $BIN_PATH
 fi
