@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 VERSION=1.9.3-p0
-source ${STOW_DEFINITIONS_PATH}/_ruby-1.9.3
+source ${STOW_DEFINITIONS_PATH}/ruby-1.9.3
