@@ -6,7 +6,7 @@ install_master()
   _url=https://github.com/fesplugas/dripper/tarball/master
 
   cd $(mktemp -d /tmp/dripper.XXXXXXXXXX)
-  curl -L ${_url} -o dripper.tar.gz
+  curl --silent -L ${_url} -o dripper.tar.gz
   tar xzf dripper.tar.gz
   cd fesplugas-dripper*
   source script/install
