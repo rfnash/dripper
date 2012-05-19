@@ -8,7 +8,7 @@ URL=http://garr.dl.sourceforge.net/project/ctags/ctags/$VERSION/$STOW.tar.gz
 
 if _install; then
   cd $SRC_PATH
-  curl -O $URL
+  curl --silent -O $URL
   tar xzf $STOW.tar.gz
   cd $STOW
   ./configure \
