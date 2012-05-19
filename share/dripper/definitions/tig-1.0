@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+PACKAGE=tig
+VERSION=1.0
+
+set_variables
+URL=http://jonas.nitro.dk/tig/releases/tig-1.0.tar.gz
+
+if _install; then
+  cd $SRC_PATH
+  curl --silent -O $URL
+  tar xzf $STOW.tar.gz
+  cd $STOW
+  ./configure \
+    --prefix=$PREFIX
+    --with-readlib
+  make install
+fi
