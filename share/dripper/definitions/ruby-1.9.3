@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
 
-if [ -z "${VERSION}" ]; then
-  echo "No version provided."
-  exit 1
-fi
-
 PACKAGE=ruby
 
+require_version
 set_variables
 
 YAML_STOW=yaml-0.1.4

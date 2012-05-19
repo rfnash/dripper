@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
 
-if [ -z "${VERSION}" ]; then
-  echo "No version provided."
-  exit 1
-fi
-
 PACKAGE=vim
 
+require_version
 set_variables
 
 if _install; then
