@@ -13,6 +13,5 @@ if _install; then
   cd $STOW
   ./configure \
     --prefix=$PREFIX
-    --with-readlib
   make install
 fi
