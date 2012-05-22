@@ -10,7 +10,7 @@ URL=http://www.python.org/ftp/python/$VERSION/$STOW.tgz
 
 if _install; then
   cd $SRC_PATH
-  curl -O $URL
+  curl --silent -O $URL
   tar xzf $STOW.tgz
 
   cd $STOW
