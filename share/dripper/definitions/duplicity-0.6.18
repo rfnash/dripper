@@ -11,6 +11,7 @@ if _install; then
   PIP_BIN="${HOME}/.packages/stow/python-2.7.3/bin/pip"
   if [ -f $PIP_BIN ]; then
     ${PIP_BIN} install ${URL}
+    drip link python-2.7.3
   else
     echo "\`${PIP_BIN}' not present."
     exit 1
