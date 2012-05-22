@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+PACKAGE=duplicity
+VERSION='0.6.18'
+
+set_variables
+
+URL="https://launchpad.net/duplicity/0.6-series/${VERSION}/+download/${STOW}.tar.gz"
+
+if _install; then
+  PIP_BIN="${HOME}/.packages/stow/python-2.7.3/bin/pip"
+  if [ -f $PIP_BIN ]; then
+    ${PIP_BIN} install ${URL}
+  else
+    echo "\`${PIP_BIN}' not present."
+    exit 1
+  fi
+fi
