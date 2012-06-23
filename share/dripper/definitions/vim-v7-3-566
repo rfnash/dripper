@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+VERSION='v7-3-566'
+source ${STOW_DEFINITIONS_PATH}/vim
