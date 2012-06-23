@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+PACKAGE=node
+
+require_version
+set_variables
+
+if _install; then
+  cd $SRC_PATH
+  curl -O http://nodejs.org/dist/$VERSION/$STOW.tar.gz
+  tar xzf $STOW.tar.gz
+  cd $STOW
+  ./configure \
+    --prefix=$PREFIX
+  make && make install
+fi
