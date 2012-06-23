@@ -47,17 +47,19 @@ Namespaced Environments
 Imagine you have different projects with different requirements and
 want to load a different `ruby` version for each one. Familiar, right?
 
-    function source-env {
-      [ -e ./.env ] && source ./.env
-    }
+Create an `.env` file in the root of your project and append packages
+paths:
 
-Now you can add a `ruby` to the load path of the project by running:
+    drip path ruby-1.9.3-p194 >> .env
 
-    drip path ruby-1.9.3-p125 > .env
+Now you need to run all commands using the "namespace":
 
-And when you go into the folder you can load the environment file:
+    $ ruby --version
+    ruby 1.8.7 (2011-12-28 patchlevel 357) [universal-darwin11.0]
 
-    source-env
+    $ _ ruby --version
+    => Sourced /Volumes/Projects/.env
+    ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-darwin11.4.0]
 
 
 Conventions
