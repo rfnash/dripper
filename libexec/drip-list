@@ -10,9 +10,9 @@ list_stows() {
 
     if [ $current_item != 'stow-1.3.3' ]; then
       if [ -f ${STOW_PATH}/.stow_${current_item} ]; then
-        echo $current_item
+        echo "${current_item} (Linked)"
       else
-        echo "${current_item} (Not linked)"
+        echo "${current_item}"
       fi
     fi
   done
