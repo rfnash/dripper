@@ -41,8 +41,8 @@ Common operations:
 You can get a list of all available commands by running `drip`.
 
 
-Tips & Tricks
--------------
+Namespaced Environments
+-----------------------
 
 Imagine you have different projects with different requirements and
 want to load a different `ruby` version for each one. Familiar, right?
