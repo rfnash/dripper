@@ -72,9 +72,17 @@ stow_unlink_all() {
   done
 }
 
+# Before removing a package we need to verify it's not linked.
 stow_remove() {
-  echo "Removed package files."
-  rm -rf $STOW_PATH/$STOW
+  CONTROL_FILE="${STOW_PATH}/.stow_${1}"
+
+  if [ -f $CONTROL_FILE ]; then
+    echo "${1} linked. Can't remove."
+    exit 1
+  else
+    rm -rf $STOW_PATH/$STOW
+    echo "Removed package files."
+  fi
 }
 
 _install() {

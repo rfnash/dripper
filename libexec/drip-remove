@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+source drip-base
+source drip-validator
+source $STOW_DEFINITIONS_PATH/$1
+
+stow_remove $1
