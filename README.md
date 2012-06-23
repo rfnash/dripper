@@ -47,15 +47,17 @@ Namespaced Environments
 Imagine you have different projects with different requirements and
 want to load a different `ruby` version for each one. Familiar, right?
 
-    # Redefine `cd` to load `.env` file if exists.
-    function cd {
-      builtin cd "$@"
+    function source-env {
       [ -e ./.env ] && source ./.env
     }
 
 Now you can add a `ruby` to the load path of the project by running:
 
     drip path ruby-1.9.3-p125 > .env
+
+And when you go into the folder you can load the environment file:
+
+    source-env
 
 
 Conventions
