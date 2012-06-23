@@ -1,14 +1,4 @@
 #!/usr/bin/env bash
 
-PACKAGE=redis
-VERSION=2.4.10
-
-set_variables
-
-if _install; then
-  cd $SRC_PATH
-  curl -O http://redis.googlecode.com/files/$STOW.tar.gz
-  tar xzf $STOW.tar.gz
-  cd $STOW
-  make PREFIX=$PREFIX install
-fi
+VERSION='2.4.10'
+source ${STOW_DEFINITIONS_PATH}/redis
