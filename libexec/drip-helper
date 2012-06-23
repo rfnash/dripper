@@ -72,6 +72,11 @@ stow_unlink_all() {
   done
 }
 
+stow_remove() {
+  echo "Removed package files."
+  rm -rf $STOW_PATH/$STOW
+}
+
 _install() {
   [ ! -z $_INSTALL ]
 }
