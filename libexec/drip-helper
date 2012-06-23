@@ -76,6 +76,11 @@ stow_unlink_all() {
 stow_remove() {
   CONTROL_FILE="${STOW_PATH}/.stow_${1}"
 
+  if [ ! -d $STOW_PATH/$STOW ]; then
+    echo "Package does not installed."
+    exit 1
+  fi
+
   if [ -f $CONTROL_FILE ]; then
     echo "${1} linked. Can't remove."
     exit 1
