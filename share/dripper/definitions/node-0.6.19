@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+VERSION=v0.6.19
+source ${STOW_DEFINITIONS_PATH}/git
