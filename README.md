@@ -47,16 +47,13 @@ Tips & Tricks
 Imagine you have different projects with different requirements and
 want to load a different `ruby` version for each one. Familiar, right?
 
-    # Redefine `cd` to load environment variables from a `.env` file
-    # if exists.
+    # Redefine `cd` to load `.env` file if exists.
     function cd {
       builtin cd "$@"
-      if [ -e ./.env ] ; then
-        source ./.env
-      fi
+      [ -e ./.env ] && source ./.env
     }
 
-Now you can add a `ruby` to the load path by running:
+Now you can add a `ruby` to the load path of the project by running:
 
     drip path ruby-1.9.3-p125 > .env
 
