@@ -2,7 +2,7 @@
 
 source drip-base
 
-PACKAGES=$(ls -xt ${STOW_PATH})
+PACKAGES=$(ls -x ${STOW_PATH})
 
 list_stows() {
   for item in $PACKAGES; do
