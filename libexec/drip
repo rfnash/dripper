@@ -23,6 +23,20 @@ abs_dirname() {
   cd "$cwd"
 }
 
+find_env_file() {
+  local root="$PWD"
+
+  while [ -n "$root" ]; do
+    _DRIP_ENV_FILE="${root}/.env"
+    if [ -e $_DRIP_ENV_FILE ]; then
+      DRIP_ENV_FILE=$_DRIP_ENV_FILE
+      source $DRIP_ENV_FILE
+      break
+    fi
+    root="${root%/*}"
+  done
+}
+
 bin_path="$(abs_dirname "$0")"
 libexec_path="${bin_path}/../libexec"
 export PATH="${libexec_path}:${bin_path}:${PATH}"
@@ -35,7 +49,18 @@ case "$command" in
 * )
   command_path="$(command -v "drip-$command" || true)"
   if [ -z "$command_path" ]; then
-    echo "drip: no such command \`$command'" >&2
+    # Detect an `env` file and load it when found. Now we can wrap all
+    # commands after sourcing that env` file.
+    find_env_file $1
+    if [ $(which $1) ]; then
+      if [ -n "${DRIP_ENV_FILE}" ]; then
+        echo "=> $1 set by $DRIP_ENV_FILE"
+      fi
+      exec "$@"
+    else
+      echo "drip: no such command \`$command'" >&2
+    fi
+
     exit 1
   fi
 

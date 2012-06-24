@@ -52,13 +52,13 @@ paths:
 
     drip path ruby-1.9.3-p194 >> .env
 
-Now you need to run all commands using the "namespace":
+Now you can run all commands using `drip`, which will act as a namespace:
 
     $ ruby --version
     ruby 1.8.7 (2011-12-28 patchlevel 357) [universal-darwin11.0]
 
-    $ _ ruby --version
-    => Sourced /Volumes/Projects/.env
+    $ drip ruby --version
+    => ruby set by /Users/fesplugas/.env
     ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-darwin11.4.0]
 
 
