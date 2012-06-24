@@ -49,13 +49,26 @@ case "$command" in
 * )
   command_path="$(command -v "drip-$command" || true)"
   if [ -z "$command_path" ]; then
+    # Detect if the command is available before sourcing the env file.
+    # This will allow to give feedback on what really the set the path.
+    if [ $(which $1) ]; then
+      PRE_DRIP_CMD=$(which $1)
+    fi
+
     # Detect an `env` file and load it when found. Now we can wrap all
     # commands after sourcing that env` file.
     find_env_file $1
+
+    # Now we can go with the detection. At this point we know if there
+    # is an existing DRIP_ENV_FILE and if command was present before
+    # adding a new path.
     if [ $(which $1) ]; then
-      if [ -n "${DRIP_ENV_FILE}" ]; then
+      DRIP_CMD=$(which $1)
+
+      if [ ! $PRE_DRIP_CMD = $DRIP_CMD ]; then
         echo "=> $1 set by $DRIP_ENV_FILE"
       fi
+
       exec "$@"
     else
       echo "drip: no such command \`$command'" >&2
