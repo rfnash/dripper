@@ -65,7 +65,9 @@ case "$command" in
     if [ $(which $1) ]; then
       DRIP_CMD=$(which $1)
 
-      if [ ! $PRE_DRIP_CMD = $DRIP_CMD ]; then
+      if [ $PRE_DRIP_CMD = $DRIP_CMD ]; then
+        echo "=> $1 set by system"
+      else
         echo "=> $1 set by $DRIP_ENV_FILE"
       fi
 
