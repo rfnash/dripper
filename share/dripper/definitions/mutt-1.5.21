@@ -21,7 +21,6 @@ if _install; then
     --enable-imap \
     --enable-smtp \
     --enable-pop \
-    --enable-hcache \
     --with-homespool=.mbox
   make && make install
 fi
