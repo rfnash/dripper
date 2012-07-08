@@ -1,7 +1,7 @@
 Get `info` validates provided `package`:
 
   $ STOW_DEFINITIONS_PATH=$TESTDIR/fixtures $TESTDIR/../bin/drip info example
-  No available definition for example. Suggested packages:
+  No available definition for `example'. Suggested packages:
   => example-0.0.0
   [1]
 

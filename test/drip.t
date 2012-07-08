@@ -8,7 +8,7 @@ Drip command without any argument:
      search     Search a definition
      list       List installed packages
      install    Install a definition
-     uninstall  Uninstall a definition
+     uninstall  Uninstall a definition (unlink and remove)
      update     Fetch new version and definitions
      show       Show a definition
      info       Show definition info
@@ -16,6 +16,8 @@ Drip command without any argument:
      unlink     Unlink package
      cleanup    Remove all sources
      path       Show package path
+     source     Creates a subshell for package
+     remove     Remove package
   
   See 'drip help <command>' for information on a specific command.
 

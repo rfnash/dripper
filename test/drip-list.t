@@ -13,5 +13,5 @@ Get `list` returns packages installed and status:
   $ mkdir -p $STOW_PATH/linked
   $ touch $STOW_PATH/.stow_linked
   $ STOW_PATH=$TESTDIR/tmp/list $TESTDIR/../bin/drip list
-  linked
-  not-linked (Not linked)
+  linked (Linked)
+  not-linked

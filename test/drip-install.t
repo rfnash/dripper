@@ -7,7 +7,7 @@
 `install` validates provided `package`:
 
   $ $TESTDIR/../bin/drip install stow
-  No available definition for stow. Suggested packages:
+  No available definition for `stow'. Suggested packages:
   => stow-1.3.3
   [1]
 
