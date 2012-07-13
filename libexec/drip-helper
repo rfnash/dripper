@@ -77,7 +77,7 @@ stow_remove() {
   CONTROL_FILE="${STOW_PATH}/.stow_${1}"
 
   if [ ! -d $STOW_PATH/$STOW ]; then
-    echo "Package does not installed."
+    echo "Package is not installed."
     exit 1
   fi
 
