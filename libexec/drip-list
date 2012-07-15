@@ -9,11 +9,9 @@ list_stows() {
     current_item=${item##*/}
 
     if [ $current_item != 'stow-1.3.3' ]; then
-      if [ -f ${STOW_PATH}/.stow_${current_item} ]; then
-        echo "${current_item} (Linked)"
-      else
-        echo "${current_item}"
-      fi
+      MESSAGE="${current_item}"
+      [ -f ${STOW_PATH}/.stow_${current_item} ] && MESSAGE="${MESSAGE} (Linked)"
+      echo $MESSAGE
     fi
   done
 }
