@@ -4,7 +4,7 @@ _UNINSTALL=true
 
 source drip-base
 source drip-validator
-source $STOW_DEFINITIONS_PATH/$1
+source $STOW_VERSIONS_PATH/$1
 
 stow_unlink_one
 stow_remove

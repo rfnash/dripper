@@ -10,6 +10,6 @@ if [ -n "$all" ]; then
   stow_link_all
 else
   source drip-validator
-  source $STOW_DEFINITIONS_PATH/$1
+  source $STOW_VERSIONS_PATH/$1
   stow_link_one
 fi

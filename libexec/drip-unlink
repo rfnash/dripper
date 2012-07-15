@@ -10,6 +10,6 @@ if [ -n "$all" ]; then
 else
   # drip unlink <package>
   source drip-validator
-  source $STOW_DEFINITIONS_PATH/$1
+  source $STOW_VERSIONS_PATH/$1
   stow_unlink_one
 fi

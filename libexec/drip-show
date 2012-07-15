@@ -3,4 +3,4 @@
 source drip-base
 source drip-validator
 
-cat $STOW_DEFINITIONS_PATH/$1
+cat $STOW_VERSIONS_PATH/$1

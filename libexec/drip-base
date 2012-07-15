@@ -37,6 +37,12 @@ if [ ! -n "${STOW_DEFINITIONS_PATH}" ]; then
   STOW_DEFINITIONS_PATH="$(abs_dirname "$0")/../share/dripper/definitions"
 fi
 
+# If STOW_VERSIONS_PATH not defined we add a default. We want to allow
+# other developers to use their own definitions.
+if [ ! -n "${STOW_VERSIONS_PATH}" ]; then
+  STOW_VERSIONS_PATH="$(abs_dirname "$0")/../share/dripper/versions"
+fi
+
 # Set repository location:
 DRIPPER_REPOSITORY=git://github.com/fesplugas/dripper.git
 
@@ -47,6 +53,8 @@ if [ -n "$DRIPPER_DEBUG" ]; then
   echo $DRIPPER_ROOT
   echo "STOW_DEFINITIONS_PATH"
   echo $STOW_DEFINITIONS_PATH
+  echo "STOW_VERSIONS_PATH"
+  echo STOW_VERSIONS_PATH
   echo "STOW_PATH"
   echo $STOW_PATH
   echo "DRIPPER_REPOSITORY"

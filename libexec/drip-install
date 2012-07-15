@@ -10,12 +10,12 @@ source drip-validator
 # definition.
 
 if [ ! -d $STOW_PATH/$1 ]; then
-  source $STOW_DEFINITIONS_PATH/$1
+  source $STOW_VERSIONS_PATH/$1
 fi
 
 # if [ -d $STOW_PATH/$1 ]; then
 #   drip link $1
 # else
-#   source $STOW_DEFINITIONS_PATH/$1
+#   source $STOW_VERSIONS_PATH/$1
 #   stow_link_one
 # fi

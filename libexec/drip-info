@@ -6,7 +6,7 @@ source drip-validator
 # Default info message ...
 
 # Definition exists and is not installed, so go for it!
-source $STOW_DEFINITIONS_PATH/$1
+source $STOW_VERSIONS_PATH/$1
 
 # Show the info ...
 [ -z "${INFO}" ] && INFO="No info provided for \`$STOW'."
