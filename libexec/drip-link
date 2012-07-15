@@ -7,10 +7,8 @@ source drip-base
 set_options $*
 
 if [ -n "$all" ]; then
-  # drip link --all
   stow_link_all
 else
-  # drip link <packages>
   source drip-validator
   source $STOW_DEFINITIONS_PATH/$1
   stow_link_one
