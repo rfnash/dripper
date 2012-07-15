@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
-_INFO=true
-
 source drip-base
 source drip-validator
+
+# Default info message ...
 
 # Definition exists and is not installed, so go for it!
 source $STOW_DEFINITIONS_PATH/$1
 
-# Stow manager should exit if information is shown."
-echo "No info provided for $STOW."
+# Show the info ...
+[ -z "${INFO}" ] && INFO="No info provided for \`$STOW'."
+echo "${INFO}"

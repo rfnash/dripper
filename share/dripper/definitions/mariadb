@@ -40,8 +40,8 @@ if _install; then
   cp $PREFIX/share/mysql/mysql.server $PREFIX/bin
 fi
 
-if _info; then
-  echo "Set up databases with:
+INFO="
+Set up databases with:
 
   unset TMPDIR
   mysql_install_db
@@ -50,6 +50,4 @@ You can start/stop MySQL with:
 
   mysql.server start
   mysql.server stop
-    "
-  exit
-fi
+"
