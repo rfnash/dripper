@@ -8,10 +8,7 @@ set_variables
 if _install; then
   cd $SRC_PATH
 
-  # HACK
-  $STOW=$STOW-ga
-
-  URL="http://ftp.osuosl.org/pub/mariadb/mariadb-5.3.5-ga/kvm-tarbake-jaunty-x86/$STOW.tar.gz"
+  URL="http://ftp.osuosl.org/pub/mariadb/$STOW/kvm-tarbake-jaunty-x86/$STOW.tar.gz"
   curl -O $URL
   tar xzf $STOW.tar.gz
 
