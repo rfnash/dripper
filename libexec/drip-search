@@ -9,22 +9,20 @@ if [ ! -d $STOW_VERSIONS_PATH ]; then
   exit 1
 fi
 
-if [ $1 ]; then
-  PACKAGES=$(ls ${STOW_VERSIONS_PATH}/*$1*)
-else
-  PACKAGES=$(ls ${STOW_VERSIONS_PATH})
-fi
+FILTER="${STOW_VERSIONS_PATH}"
+[ $1 ] && FILTER="${STOW_VERSIONS_PATH}/*$1*"
+PACKAGES=$(ls ${FILTER})
 
 list_definitions() {
   for item in $PACKAGES; do
     current_item=${item##*/}
-
     if [ $current_item != 'stow-1.3.3' ]; then
-      if [ -d ${STOW_PATH}/${current_item} ]; then
-        echo "${current_item} (Installed)"
-      else
-        echo "${current_item}"
-      fi
+      MSG=${current_item}
+
+      [ -d ${STOW_PATH}/${current_item} ] && MSG="${MSG} Installed"
+      [ -f ${STOW_PATH}/.stow_${current_item} ] && MSG="${MSG} Linked"
+
+      echo $MSG
     fi
   done
 }
