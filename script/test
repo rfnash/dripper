@@ -7,10 +7,10 @@ if [ -z $(which stow) ]; then
   exit 1
 fi
 
-if [ -z $(which cram) ]; then
-  echo "Cram not installed. Install with \`pip install cram'."
-  echo "More info about cram at https://bitheap.org/cram/"
+if [ -z $(which bats) ]; then
+  echo "bats not installed."
+  echo "More info about cram at https://github.com/sstephenson/bats"
   exit 1
 fi
 
-cram -vi test/*.t
+./test/*.sh
