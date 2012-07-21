@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+PACKAGE=ctags
+VERSION=5.8
+
+set_variables
+URL=http://garr.dl.sourceforge.net/project/ctags/ctags/$VERSION/$STOW.tar.gz
+
+if _install; then
+  cd $SRC_PATH
+  curl --silent -O $URL
+  tar xzf $STOW.tar.gz
+  cd $STOW
+  ./configure \
+    --prefix=$PREFIX \
+    --enable-macro-patterns \
+    --with-readlib
+  make install
+fi
