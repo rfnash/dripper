@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
 
+# Usage:
+#
+#     drip unlink --all
+#     drip unlink <package>
+
 source drip-base
 
 set_options $*
 
 if [ -n "$all" ]; then
-  # drip unlink --all
   stow_unlink_all
 else
-  # drip unlink <package>
   source drip-validator
   source $STOW_VERSIONS_PATH/$1
   stow_unlink_one
