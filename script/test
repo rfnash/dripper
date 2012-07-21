@@ -8,8 +8,8 @@ if [ -z $(which stow) ]; then
 fi
 
 if [ -z $(which bats) ]; then
-  echo "bats not installed."
-  echo "More info about cram at https://github.com/sstephenson/bats"
+  echo "\`bats' not installed."
+  echo "More info about \`bats' at https://github.com/sstephenson/bats"
   exit 1
 fi
 
