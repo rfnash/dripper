@@ -3,8 +3,6 @@
 source drip-base
 source drip-validator
 
-# Default info message ...
-
 # Definition exists and is not installed, so go for it!
 source $STOW_VERSIONS_PATH/$1
 
