@@ -13,4 +13,7 @@ if [ -z $(which bats) ]; then
   exit 1
 fi
 
-./test/*.sh
+for bat in $(ls test/*.bats)
+do
+  $bat
+done
