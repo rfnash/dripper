@@ -5,7 +5,7 @@ source drip-base
 # Verify provided folder exists before doing anything, if it does not
 # exist exit.
 if [ ! -d $STOW_VERSIONS_PATH ]; then
-  echo "Provided STOW_VERSION_PATH does not exist."
+  echo "Provided STOW_VERSIONS_PATH does not exist."
   exit 1
 fi
 
