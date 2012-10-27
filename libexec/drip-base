@@ -46,21 +46,6 @@ fi
 # Set repository location:
 DRIPPER_REPOSITORY=git://github.com/fesplugas/dripper.git
 
-if [ -n "$DRIPPER_DEBUG" ]; then
-  echo "DEFAULT_DRIPPER_ROOT"
-  echo $DEFAULT_DRIPPER_ROOT
-  echo "DRIPPER_ROOT"
-  echo $DRIPPER_ROOT
-  echo "STOW_DEFINITIONS_PATH"
-  echo $STOW_DEFINITIONS_PATH
-  echo "STOW_VERSIONS_PATH"
-  echo STOW_VERSIONS_PATH
-  echo "STOW_PATH"
-  echo $STOW_PATH
-  echo "DRIPPER_REPOSITORY"
-  echo $DRIPPER_REPOSITORY
-fi
-
 if [ -z "$DRIPPER_DEBUG" ]; then
   source drip-requirements
 fi
