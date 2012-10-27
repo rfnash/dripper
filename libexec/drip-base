@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -z "$DRIPPER_DEBUG" ]; then
+if [ -z "$DEBUG" ]; then
   source drip-helper
 fi
 
@@ -46,6 +46,6 @@ fi
 # Set repository location:
 DRIPPER_REPOSITORY=git://github.com/fesplugas/dripper.git
 
-if [ -z "$DRIPPER_DEBUG" ]; then
+if [ -z "$DEBUG" ]; then
   source drip-requirements
 fi
