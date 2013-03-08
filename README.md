@@ -41,8 +41,8 @@ Common operations:
 You can get a list of all available commands by running `drip`.
 
 
-Namespaced Environments
------------------------
+Commands with custom env file
+-----------------------------
 
 Imagine you have different projects with different requirements and
 want to load a different `ruby` version for each one. Familiar, right?
@@ -58,8 +58,10 @@ Now you can run all commands using `drip`, which will act as a namespace:
     ruby 1.8.7 (2011-12-28 patchlevel 357) [universal-darwin11.0]
 
     $ drip ruby --version
-    => ruby set by /Users/fesplugas/.env
+    => Sourced by /Users/fesplugas/.env
     ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-darwin11.4.0]
+
+Notice that you can also set environment variables to that file.
 
 
 Conventions
