@@ -14,10 +14,12 @@ fi
 
 BIN_PATH="$DRIPPER_ROOT/bin"
 SHARE_PATH="$DRIPPER_ROOT/share/dripper/definitions"
+VERSIONS_PATH="$DRIPPER_ROOT/share/dripper/versions"
 LIBEXEC_PATH="$DRIPPER_ROOT/libexec"
 
 mkdir -p $BIN_PATH
 mkdir -p $SHARE_PATH
+mkdir -p $VERSIONS_PATH
 mkdir -p $LIBEXEC_PATH
 
 for file in ./bin/*; do
@@ -26,6 +28,10 @@ done
 
 for file in ./share/dripper/definitions/*; do
   cp $file $SHARE_PATH
+done
+
+for file in ./share/dripper/versions/*; do
+  cp $file $VERSIONS_PATH
 done
 
 for file in ./libexec/*; do
