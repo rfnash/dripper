@@ -78,7 +78,7 @@ Thanks to [Homebrew], it's an awesome tool. As an [stow] user I
 always wanted to do something similar and [Homebrew] has inspired
 many of the commands used by **Dripper**.
 
-Thanks to [sub], 'a delicious way to organize programs'.
+Thanks to [sub], *a delicious way to organize programs*.
 
 [stow]: http://www.gnu.org/s/stow/
 [Homebrew]: https://github.com/mxcl/homebrew
