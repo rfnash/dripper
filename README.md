@@ -52,16 +52,16 @@ paths:
 
     drip path ruby-1.9.3-p194 >> .env
 
-Now you can run all commands using `drip`, which will act as a namespace:
+Now you can run all commands using `drip`, which will act as a namespace.
 
     $ ruby --version
-    ruby 1.8.7 (2011-12-28 patchlevel 357) [universal-darwin11.0]
+    ruby 2.0.0p0 (2013-02-24 revision 39474) [x86_64-darwin12.2.1]
 
-    $ drip ruby --version
-    => Sourced by /Users/fesplugas/.env
-    ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-darwin11.4.0]
+    $ ./bin/drip ruby --version
+    Sourced /Users/fesplugas/Development/dripper/.env
+    ruby 1.9.3p392 (2013-02-22 revision 39386) [x86_64-darwin12.2.1]
 
-Notice that you can also set environment variables to that file.
+Notice that you can also set environment variables on that file.
 
 
 Conventions
