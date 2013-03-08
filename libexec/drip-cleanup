@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Usage: drip cleanup
+# Summary: Remove all sources
 
 source drip-base
 

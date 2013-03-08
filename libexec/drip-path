@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Usage: drip path <package>
+# Summary: Show package path
 
 source drip-base
 source drip-validator

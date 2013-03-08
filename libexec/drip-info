@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Usage: drip info <definition>
+# Summary: Show definition info
 
 source drip-base
 source drip-validator

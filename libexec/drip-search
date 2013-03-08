@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Usage: drip search <definition>
+# Summary: Search a definition
 
 source drip-base
 

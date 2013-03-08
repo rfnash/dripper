@@ -3,10 +3,8 @@
 set -e
 [ -n "$DEBUG" ] && set -x
 
-VERSION='0.0.0'
-
 resolve_link() {
-  $(type -p greadlink readlink | head -1) $1
+  $(type -p greadlink readlink | head -1) "$1"
 }
 
 abs_dirname() {
@@ -29,57 +27,37 @@ find_env_file() {
   while [ -n "$root" ]; do
     _DRIP_ENV_FILE="${root}/.env"
     if [ -e $_DRIP_ENV_FILE ]; then
-      DRIP_ENV_FILE=$_DRIP_ENV_FILE
-      source $DRIP_ENV_FILE
+      echo "Sourced $_DRIP_ENV_FILE"
+      source $_DRIP_ENV_FILE
       break
     fi
     root="${root%/*}"
   done
 }
 
-bin_path="$(abs_dirname "$0")"
-libexec_path="${bin_path}/../libexec"
-export PATH="${libexec_path}:${bin_path}:${PATH}"
+libexec_path="$(abs_dirname "$0")"
+export _DRIP_ROOT="$(abs_dirname "$libexec_path")"
+export PATH="${libexec_path}:$PATH"
 
 command="$1"
 case "$command" in
 "" | "-h" | "--help" )
-  echo -e "$(drip-help)" >&2
+  exec drip-help
   ;;
 * )
   command_path="$(command -v "drip-$command" || true)"
+
   if [ -z "$command_path" ]; then
-    # Detect if the command is available before sourcing the env file.
-    # This will allow to give feedback on what really the set the path.
-    if [ $(which $1) ]; then
-      PRE_DRIP_CMD=$(which $1)
-    fi
-
-    # Detect an `env` file and load it when found. Now we can wrap all
-    # commands after sourcing that env` file.
     find_env_file $1
+    exec "$@"
+  fi
 
-    # Now we can go with the detection. At this point we know if there
-    # is an existing DRIP_ENV_FILE and if command was present before
-    # adding a new path.
-    if [ $(which $1) ]; then
-      DRIP_CMD=$(which $1)
-
-      if [ $PRE_DRIP_CMD = $DRIP_CMD ]; then
-        echo "=> $1 set by system"
-      else
-        echo "=> $1 set by $DRIP_ENV_FILE"
-      fi
-
-      exec "$@"
-    else
-      echo "drip: no such command \`$command'" >&2
-    fi
-
+  if [ ! -x "$command_path" ]; then
+    echo "drip: no such command \`$command'" >&2
     exit 1
   fi
 
-  shift 1
+  shift
   exec "$command_path" "$@"
   ;;
 esac

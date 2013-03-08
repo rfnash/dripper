@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Usage: drip install <definition>
+# Summary: Install a definition
 
 _INSTALL=true
 

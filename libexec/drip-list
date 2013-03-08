@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Usage: drip list
+# Summary: List installed packages
 
 source drip-base
 

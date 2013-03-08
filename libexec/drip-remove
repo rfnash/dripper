@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Usage: drip remove <package>
+# Summary: Remove package
 
 source drip-base
 source drip-validator

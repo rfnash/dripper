@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Usage: drip link <definition>
+# Summary: Link package
 
 _LINK=true
 

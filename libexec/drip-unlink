@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-
-# Usage:
-#
-#     drip unlink --all
-#     drip unlink <package>
+# Usage: drip unlink <definition>
+# Summary: Unlink package
+# Help: Uou can also pass the '--all' option to link all installed packages
 
 source drip-base
 
