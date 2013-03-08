@@ -28,11 +28,6 @@ if _install; then
     --enable-pthread \
     --enable-shared
   make && make install
-
-  cd $PREFIX
-  ./bin/gem update --system
-  ./bin/gem install bundler --no-ri --no-rdoc
-  ./bin/gem install rake --no-ri --no-rdoc
 fi
 
 if _install; then
