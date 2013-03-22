@@ -12,7 +12,9 @@ if _install; then
   cd $STOW
   ./configure \
     --prefix=$PREFIX
-  make && make install
+  make clean
+  make NO_MSGFMT=y
+  make install
 
   COMPLETION_PATH=$PREFIX/etc/bash_completion.d
   mkdir -p $COMPLETION_PATH
