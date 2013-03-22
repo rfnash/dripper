@@ -13,7 +13,7 @@ if _install; then
   ./configure \
     --prefix=$PREFIX
   make clean
-  make NO_MSGFMT=y
+  make NO_GETTEXT=y
   make install
 
   COMPLETION_PATH=$PREFIX/etc/bash_completion.d
