@@ -6,7 +6,7 @@ source drip-base
 
 require_git
 
-cd $DRIPPER_ROOT
+cd $_DRIP_ROOT
 
 if [ -d .git ]; then
   git pull --rebase origin refs/heads/master:refs/remotes/origin/master
