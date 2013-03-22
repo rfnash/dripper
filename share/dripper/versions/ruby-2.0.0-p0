@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+VERSION=2.0.0-p0
+source ${STOW_DEFINITIONS_PATH}/ruby-2.0.0
