@@ -6,8 +6,6 @@ with [stow], the GNU package manager. It's always recommended to use
 package manager provided by your system, but sometimes you need a tool
 to install alternate packages.
 
-You can see a list of definitions [here][definitions].
-
 
 Install
 -------
