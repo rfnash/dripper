@@ -16,10 +16,11 @@ Clone the repository and run the install script:
 
     git clone git://github.com/fesplugas/dripper.git ~/.dripper
 
-Enable drip:
+To enable `dripper` run:
 
-    echo 'eval "$($HOME/.dripper/bin/drip init -)"' >> ~/.bash_profile
-    exec bash
+    ~/.dripper/bin/drip init
+
+And follow the instructions.
 
 
 Usage
