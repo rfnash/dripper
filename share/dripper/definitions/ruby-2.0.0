@@ -10,7 +10,7 @@ YAML_STOW_PATH=$STOW_PATH/$YAML_STOW
 
 if _install; then
   cd $SRC_PATH
-  curl --silent -O http://ftp.ruby-lang.org/pub/ruby/2.0/$STOW.tar.gz
+  curl -O http://ftp.ruby-lang.org/pub/ruby/2.0/$STOW.tar.gz
   tar xzf $STOW.tar.gz
   cd $STOW
   ./configure \
