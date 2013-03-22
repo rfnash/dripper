@@ -12,18 +12,14 @@ You can see a list of definitions [here][definitions].
 Install
 -------
 
-### Using Git
-
 Clone the repository and run the install script:
 
-    git clone git://github.com/fesplugas/dripper.git
-    cd dripper
-    script/install
+    git clone git://github.com/fesplugas/dripper.git ~/.dripper
 
+Enable drip:
 
-### Using the installer
-
-    curl -L https://raw.github.com/fesplugas/dripper/master/script/installer | bash
+    echo 'eval "$($HOME/.dripper/bin/drip init -)"' >> ~/.bash_profile
+    exec bash
 
 
 Usage
