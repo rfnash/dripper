@@ -1,5 +1,4 @@
-Dripper
-=======
+# Dripper
 
 **Dripper** is a collection of definitions to install software packages
 with [stow], the GNU package manager. It's always recommended to use
@@ -7,8 +6,7 @@ package manager provided by your system, but sometimes you need a tool
 to install alternate packages.
 
 
-Install
--------
+## Install
 
 Clone the repository and run the install script:
 
@@ -21,8 +19,7 @@ To enable `dripper` run:
 And follow the instructions.
 
 
-Usage
------
+## Usage
 
 Common operations:
 
@@ -36,8 +33,7 @@ Common operations:
 You can get a list of all available commands by running `drip`.
 
 
-Commands with custom env file
------------------------------
+## Commands with custom env file
 
 Imagine you have different projects with different requirements and
 want to load a different `ruby` version for each one. Familiar, right?
@@ -59,15 +55,13 @@ Now you can run all commands using `drip`, which will act as a namespace.
 Notice that you can also set environment variables on that file.
 
 
-Conventions
------------
+## Conventions
 
 - Sources are downloaded into `/usr/local/src` or `$HOME/.packages/src`.
 - Packages are compiled into `/usr/local/stow` or `$HOME/.packages/stow`.
 
 
-Acknowledgements
-----------------
+## Acknowledgements
 
 Thanks to [Homebrew], it's an awesome tool. As an [stow] user I
 always wanted to do something similar and [Homebrew] has inspired
