@@ -45,14 +45,14 @@ want to load a different `ruby` version for each one. Familiar, right?
 Create an `.env` file in the root of your project and append packages
 paths:
 
-    drip path ruby-1.9.3-p194 >> .env
+    drip path ruby-1.9.3-p392 >> .env
 
 Now you can run all commands using `drip`, which will act as a namespace.
 
     $ ruby --version
     ruby 2.0.0p0 (2013-02-24 revision 39474) [x86_64-darwin12.2.1]
 
-    $ ./bin/drip ruby --version
+    $ drip ruby --version
     Sourced /Users/fesplugas/Development/dripper/.env
     ruby 1.9.3p392 (2013-02-22 revision 39386) [x86_64-darwin12.2.1]
 
