@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Usage: drip uninstall <definition>
-# Summary: Fetch new versions and definitions
+# Usage: drip update <definition>
+# Summary: Fetch new versions and definitions and update dripper code
 
 source drip-base
 
