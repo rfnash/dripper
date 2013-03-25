@@ -7,7 +7,7 @@ fi
 if [ $(id -u) = "0" ]; then
   DEFAULT_DRIPPER_ROOT=/usr/local
 else
-  DEFAULT_DRIPPER_ROOT=$HOME/.dripper/packages
+  DEFAULT_DRIPPER_ROOT=$HOME/.dripper
 fi
 
 if [ -z "${DRIPPER_ROOT}" ]; then
