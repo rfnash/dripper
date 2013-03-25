@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+PACKAGE=stow
+VERSION=2.2.0
+
+set_variables
+
+if _install; then
+  cd $SRC_PATH
+  curl --silent -O http://ftp.gnu.org/pub/gnu/stow/$STOW.tar.gz
+  tar xzf $STOW.tar.gz
+  cd $STOW
+  ./configure \
+    --prefix=$PREFIX
+  make install
+  exit
+fi
+
+if _link; then
+  echo "$1 already installed."
+  exit
+fi
