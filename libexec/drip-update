@@ -9,8 +9,9 @@ require_git
 cd $_DRIP_ROOT
 
 if [ -d .git ]; then
-  git pull --rebase origin refs/heads/master:refs/remotes/origin/master
   git checkout master
+  git reset --hard
+  git pull --rebase origin refs/heads/master:refs/remotes/origin/master
 else
   git init
   git config core.autocrlf false
