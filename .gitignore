@@ -8,3 +8,4 @@ src/
 /stow/
 var/
 test/tmp
+share/man
