@@ -26,6 +26,7 @@ if _install; then
     --with-opt-dir=$YAML_STOW_PATH \
     --disable-install-doc \
     --enable-pthread \
+    --enable-load-relative \
     --enable-shared
   make && make install
 fi
