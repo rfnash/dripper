@@ -17,6 +17,7 @@ if _install; then
     --prefix=$PREFIX \
     --disable-install-doc \
     --enable-pthread \
+    --enable-load-relative \
     --enable-shared
   make && make install
 fi
