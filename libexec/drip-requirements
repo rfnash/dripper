@@ -40,7 +40,7 @@ require_version() {
 }
 
 require_stow() {
-  local STOW_VERSION='1.3.3'
+  local STOW_VERSION='2.2.0'
   local PACKAGE="stow-${STOW_VERSION}"
   local STOW_BIN_PATH="${STOW_PATH}/${PACKAGE}/bin"
 
