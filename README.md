@@ -57,8 +57,8 @@ Notice that you can also set environment variables on that file.
 
 ## Conventions
 
-- Sources are downloaded into `/usr/local/src` or `$HOME/.packages/src`.
-- Packages are compiled into `/usr/local/stow` or `$HOME/.packages/stow`.
+- Sources are downloaded into `/usr/local/src` or `$HOME/.dripper/src`.
+- Packages are compiled into `/usr/local/stow` or `$HOME/.dripper/stow`.
 
 
 ## Acknowledgements
