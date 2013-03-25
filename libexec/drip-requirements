@@ -40,15 +40,13 @@ require_version() {
 }
 
 require_stow() {
-  local STOW_VERSION='2.2.0'
-  local PACKAGE="stow-${STOW_VERSION}"
-  local STOW_BIN_PATH="${STOW_PATH}/${PACKAGE}/bin"
+  local STOW_BIN_PATH="${STOW_PATH}/${STOW_PACKAGE}/bin"
 
-  if [ ! $1 = $PACKAGE ]; then
+  if [ ! $1 = $STOW_PACKAGE ]; then
     if [ -d $STOW_BIN_PATH ]; then
       PATH=$STOW_BIN_PATH:$PATH
     else
-      drip install $PACKAGE >> ~/.dripper/install.log
+      drip install $STOW_PACKAGE >> ~/.dripper/install.log
     fi
   fi
 }

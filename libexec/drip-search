@@ -18,7 +18,7 @@ PACKAGES=$(ls ${FILTER})
 list_definitions() {
   for item in $PACKAGES; do
     current_item=${item##*/}
-    if [ $current_item != 'stow-1.3.3' ]; then
+    if [ $current_item != $STOW_PACKAGE ]; then
       MSG=${current_item}
 
       [ -d ${STOW_PATH}/${current_item} ] && MSG="${MSG} (Installed)"

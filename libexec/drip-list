@@ -10,7 +10,7 @@ list_stows() {
   for item in $PACKAGES; do
     current_item=${item##*/}
 
-    if [ $current_item != 'stow-1.3.3' ]; then
+    if [ $current_item != $STOW_PACKAGE ]; then
       MESSAGE="${current_item}"
       [ -f ${STOW_PATH}/.stow_${current_item} ] && MESSAGE="${MESSAGE} (Linked)"
       echo $MESSAGE

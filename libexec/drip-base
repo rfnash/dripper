@@ -46,6 +46,10 @@ fi
 # Set repository location:
 DRIPPER_REPOSITORY=git://github.com/fesplugas/dripper.git
 
+# Set STOW_VERSION and STOW_PACKAGE:
+STOW_VERSION="2.2.0"
+STOW_PACKAGE="stow-${STOW_VERSION}"
+
 if [ -z "$DEBUG" ]; then
   source drip-requirements
 fi
