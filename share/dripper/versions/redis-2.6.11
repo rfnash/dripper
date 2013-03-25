@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+VERSION='2.6.11'
+source ${STOW_DEFINITIONS_PATH}/redis
