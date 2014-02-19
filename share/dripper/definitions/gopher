@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+PACKAGE=gopher
+
+require_version
+set_variables
+
+if _install; then
+  require_git
+  cd $SRC_PATH
+
+  # Keep a master repository.
+  if [ ! -d "${PACKAGE}-repository" ]; then
+    git clone https://github.com/jgoerzen/gopher.git $PACKAGE-repository
+  else
+    pushd $PACKAGE-repository > /dev/null
+      git pull
+    popd
+  fi
+
+  if [ ! -d ${STOW} ]; then
+    git clone  $PACKAGE-repository $STOW
+    git checkout $VERSION
+  fi
+  cd $STOW
+  chmod +x ./configure
+  ./configure \
+    --prefix=$PREFIX
+  mkdir -p "$PREFIX/bin"
+  touch "$PREFIX/bin/gopher"
+  touch "$PREFIX/bin/gopherfilt"
+  make && make install
+fi

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+VERSION=master
+source ${STOW_DEFINITIONS_PATH}/gopher
